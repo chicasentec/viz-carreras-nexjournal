@@ -1,0 +1,3 @@
+https://docs.google.com/spreadsheets/d/1zMbFfT1MPhmjHjm5zfwPUBqaHxJRU7tD5mOxHFht_M0/gviz/tq?tqx=out:csv&sheet=alumnos
+https://docs.google.com/spreadsheets/d/1zMbFfT1MPhmjHjm5zfwPUBqaHxJRU7tD5mOxHFht_M0/gviz/tq?tqx=out:csv&sheet=universidades
+https://docs.google.com/spreadsheets/d/1zMbFfT1MPhmjHjm5zfwPUBqaHxJRU7tD5mOxHFht_M0/gviz/tq?tqx=out:csv&sheet=carreras
