@@ -1,7 +1,0 @@
-Descargar repositorio
-
-Correr archivo makefile para descargar las tablas a utilizar
-
-pip install geopandas
-pip install folium
-pip install
