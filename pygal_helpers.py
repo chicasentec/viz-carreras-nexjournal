@@ -4,13 +4,12 @@
 """Funciones auxiliares para usar pygal.
 """
 
-import os
 import pygal
 
 
-def df_to_pygal_line(df, height=300):
+def df_to_pygal_line(df, height=300, **kwargs):
     """Genera un gráfico de líneas a partir de un DataFrame."""
-    chart = pygal.Line(x_label_rotation=20, height=height)
+    chart = pygal.Line(x_label_rotation=20, height=height, **kwargs)
     chart.x_labels = list(df.index)
 
     for col in df.columns:
@@ -58,12 +57,12 @@ def get_pygal_html_two_charts(pygal_chart_obj1, pygal_chart_obj2):
        <!-- ... -->
      </head>
      <body>
-        <div style="width: 48%; display=inline-block;">
+        <div style="width: 49%; display: inline-block;">
        <figure>
          {pygal_render1}
        </figure>
         </div>
-        <div style="width: 48%; display=inline-block;">
+        <div style="width: 49%; display: inline-block;">
        <figure>
          {pygal_render2}
        </figure>
