@@ -40,5 +40,41 @@ def get_pygal_html(pygal_chart_obj):
    """
 
     return html_pygal.format(
-        pygal_render=pygal_chart_obj.render(is_unicode=True)
+        pygal_render=pygal_chart_obj.render(is_unicode=True,
+                                            disable_xml_declaration=True)
+    )
+
+
+def get_pygal_html_two_charts(pygal_chart_obj1, pygal_chart_obj2):
+    """Convierte un gráfico de pygal en HTML."""
+
+    html_pygal = """
+   <!DOCTYPE html>
+   <html>
+     <head>
+     <script type="text/javascript" src="http://kozea.github.com/pygal.js/javascripts/svg.jquery.js"></script>
+     <script type="text/javascript" src="http://kozea.github.com/pygal.js/latest/pygal-tooltips.min.js"></script>
+     <script type="text/javascript" xlink:href="https://kozea.github.io/pygal.js/2.0.x/pygal-tooltips.min.js"></script>
+       <!-- ... -->
+     </head>
+     <body>
+        <div style="width: 48%; display=inline-block;">
+       <figure>
+         {pygal_render1}
+       </figure>
+        </div>
+        <div style="width: 48%; display=inline-block;">
+       <figure>
+         {pygal_render2}
+       </figure>
+        </div>
+     </body>
+   </html>
+   """
+
+    return html_pygal.format(
+        pygal_render1=pygal_chart_obj1.render(
+            is_unicode=True, disable_xml_declaration=True),
+        pygal_render2=pygal_chart_obj2.render(
+            is_unicode=True, disable_xml_declaration=True)
     )
