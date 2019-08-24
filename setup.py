@@ -3,9 +3,6 @@
 
 from setuptools import setup
 
-with open('README.md') as readme_file:
-    readme = readme_file.read()
-
 with open("requirements.txt") as f:
     requirements = [req.strip() for req in f.readlines()]
 
@@ -13,7 +10,6 @@ setup(
     name='proyecto-next-journal',
     version='0.1.0',
     description="Descripción corta del proyecto.",
-    long_description=readme,
     author="Magdalena Segura",
     url='https://github.com/maggiegsegura/proyecto-next-journal',
     packages=[
