@@ -14,8 +14,9 @@ setup(
     url='https://github.com/maggiegsegura/proyecto-next-journal',
     packages=[
         'scripts',
+        'data',
     ],
-    package_dir={'scripts': 'scripts'},
+    package_dir={'scripts': 'scripts', 'data': 'data'},
     include_package_data=True,
     install_requires=requirements,
     license="MIT license",
