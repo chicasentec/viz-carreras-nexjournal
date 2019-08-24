@@ -1,11 +1,26 @@
 # Proyecto NextJournal
 
-Analisis y visualizaciones de base de datos de genero y carreras universitarias en Argentina.
+Analisis y visualizaciones de la base de datos de genero y carreras universitarias en Argentina.
 
 ## Usar el repositorio
 
 1. Clonar o descargar repositorio
-2. `make download_inputs` para descargar las tablas a utilizar
-3. `pip install -r requirements.txt`
-3. Abrir y correr etl-next-journal.ipynb
-4. Abrir y correr visualizaciones-next-journal.ipynb
+2. `pip install -e .`
+
+### ETL
+
+Si se desea modificar el procesamiento de los datos:
+
+* Abrir y correr etl-next-journal.ipynb
+
+### Visualizaciones
+
+Para ver, usar y/o modificar las visualizaciones (sobre los datos de este repositorio ya procesados, o los datos modificados por el ETL):
+
+* Abrir y correr visualizaciones-next-journal.ipynb
+
+### Visualizaciones en HTML
+
+Para generar una vista estática de las visualizaciones en HTML sin abrir el notebook:
+
+* `make report`

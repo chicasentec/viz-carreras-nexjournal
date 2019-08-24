@@ -13,11 +13,11 @@ def crear_marker(mapa, lat, lon, titulo, items):
     """
 
     popup = """<h5>{}</h5>
-<i>areas tematicas</i>
+<i>% estudiantes mujeres 2016</i>
 <ul>
 <li>{}</li>
 </ul>""".format(titulo, "</li><li>".join(items))
-    tooltip = 'Más información!'
+    tooltip = 'Click para más información!'
     folium.Marker([lat, lon], popup=popup, tooltip=tooltip).add_to(mapa)
 
 
