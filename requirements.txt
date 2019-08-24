@@ -1,4 +1,4 @@
-
+geopandas
 pandas
 folium
 matplotlib
@@ -6,3 +6,4 @@ shapely
 ipywidgets
 seaborn
 pygal
+jupyter
