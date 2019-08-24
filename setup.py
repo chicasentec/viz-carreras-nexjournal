@@ -8,7 +8,7 @@ with open("requirements.txt") as f:
 
 setup(
     name='proyecto-next-journal',
-    version='0.1.0',
+    version='0.1.1',
     description="Descripción corta del proyecto.",
     author="Magdalena Segura",
     url='https://github.com/maggiegsegura/proyecto-next-journal',
