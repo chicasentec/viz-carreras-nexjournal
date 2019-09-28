@@ -3,8 +3,8 @@
 NOTEBOOK ?=./visualizaciones-next-journal.ipynb
 REPORT ?=./reports/visualizaciones-next-journal.html
 
-download_inputs :
-	python download.py
+download_inputs:
+	python scripts/download.py
 
 clean:
 	rm -rf data/input/alumnos.csv
