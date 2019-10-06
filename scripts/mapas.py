@@ -19,9 +19,9 @@ def crear_marker(mapa, lat, lon, titulo,
 
     popup_html = """<h5>{}</h5>
 <p>
-Estudiantes: {}
+Estudiantes 2017: {}
 <br>
-Mujeres (%): {:.1%}
+Mujeres 2017 (%): {:.1%}
 </p>
 <ul>
 <li>{}</li>
