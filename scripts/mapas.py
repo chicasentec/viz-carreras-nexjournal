@@ -1,7 +1,8 @@
 import folium
 
 
-def crear_marker(mapa, lat, lon, titulo, items):
+def crear_marker(mapa, lat, lon, titulo,
+                 estudiantes_total, estudiantes_mujeres_pct, items):
     """ Pone un marker con tooltip en el mapa.
 
     Args:
@@ -11,13 +12,25 @@ def crear_marker(mapa, lat, lon, titulo, items):
         items (list): lista de strings
 
     """
+    try:
+        estudiantes_total = int(estudiantes_total)
+    except Exception as e:
+        estudiantes = None
 
-    popup = """<h5>{}</h5>
-<i>% estudiantes mujeres 2016</i>
+    popup_html = """<h5>{}</h5>
+<p>
+Estudiantes: {}
+<br>
+Mujeres (%): {:.1%}
+</p>
 <ul>
 <li>{}</li>
-</ul>""".format(titulo, "</li><li>".join(items))
+</ul>""".format(
+        titulo, estudiantes_total,
+        estudiantes_mujeres_pct, "</li><li>".join(items)
+    )
     tooltip = 'Click para más información!'
+    popup = folium.Popup(popup_html, max_width=500, min_width=300)
     folium.Marker([lat, lon], popup=popup, tooltip=tooltip).add_to(mapa)
 
 
